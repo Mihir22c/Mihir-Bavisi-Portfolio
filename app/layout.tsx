@@ -32,6 +32,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Mihirkumar Bavisi",
+              alternateName: ["Mihir Bavisi", "Mihirkumar Manubhai Bavisi"],
+              url: "https://mihirbavisi.com",
+              jobTitle: "React Native Engineer",
+              worksFor: { "@type": "Organization", name: "Diehl Metering" },
+              address: { "@type": "PostalAddress", addressLocality: "Nuremberg", addressCountry: "DE" },
+              sameAs: [
+                "https://github.com/Mihir22c",
+                "https://www.linkedin.com/in/mihirbavisi/",
+              ],
+            }),
+          }}
+        />
         <LangProvider>{children}</LangProvider>
       </body>
     </html>
