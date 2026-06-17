@@ -51,11 +51,11 @@ i18n.tsx EN/DE dictionary + language context
 
 public/
 
-Mihir_Bavisi_CV_EN.pdf
+CV_Mihirkumar_Bavisi_Core.pdf
 
-Mihir_Bavisi_Lebenslauf_DE.pdf
+Lebenslauf_Mihirkumar_Bavisi_Core.pdf
 
-Mihir_Bavisi_References.pdf
+ArbeitsZeugnis.pdf
 
 The CV buttons serve the English or German PDF based on the active language
 toggle, and open it in an in-page viewer (with Download + Open-in-new-tab).
