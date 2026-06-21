@@ -298,3 +298,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes heroUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes shimmer { to { background-position: 200% center; } }
+
+/* Only animate when the visitor hasn't asked for reduced motion.
+   This also guarantees fade-up elements are visible if animations are off. */
+@media (prefers-reduced-motion: no-preference) {
+  .anim-up { opacity: 0; animation: heroUp .7s cubic-bezier(.22, .61, .36, 1) forwards; }
+  .anim-d1 { animation-delay: .05s; }
+  .anim-d2 { animation-delay: .15s; }
+  .anim-d3 { animation-delay: .25s; }
+  .anim-d4 { animation-delay: .35s; }
+  .anim-d5 { animation-delay: .45s; }
+
+  .phone { animation: floaty 6s ease-in-out infinite; }
+
+  .hero h1 .grad {
+    background: linear-gradient(100deg, var(--violet), var(--violet-2), var(--violet));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 6s linear infinite;
+  }
+}

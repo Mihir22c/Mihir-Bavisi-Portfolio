@@ -14,15 +14,15 @@ export default function Hero() {
     <header className="hero" id="top">
       <div className="wrap hero-grid">
         <div>
-          <span className="eyebrow">{t.hero.eyebrow}</span>
-          <h1>
+          <span className="eyebrow anim-up anim-d1">{t.hero.eyebrow}</span>
+          <h1 className="anim-up anim-d2">
             {t.hero.line1} {t.hero.line2}
             <br />
             {t.hero.line3a}
             <span className="grad">{t.hero.line3b}</span> {t.hero.line4}
           </h1>
-          <p className="hero-body">{t.hero.body}</p>
-          <div className="hero-cta">
+          <p className="hero-body anim-up anim-d3">{t.hero.body}</p>
+          <div className="hero-cta anim-up anim-d4">
             <a className="btn btn-primary" href="#work">
               {t.hero.ctaWork} →
             </a>
@@ -31,7 +31,7 @@ export default function Hero() {
               {t.hero.ctaContact}
             </a>
           </div>
-          <div className="hero-stats">
+          <div className="hero-stats anim-up anim-d5">
             <div>
               <div className="n">{t.hero.stat1}</div>
               <div className="l">{t.hero.stat1l}</div>
