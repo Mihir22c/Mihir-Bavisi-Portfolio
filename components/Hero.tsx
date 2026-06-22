@@ -1,7 +1,9 @@
 "use client";
 
 import { useLang } from "@/lib/i18n";
-import PdfButton from "./PdfButton";
+import Counter from "@/components/Counter";
+import Magnetic from "@/components/Magnetic";
+import Parallax from "@/components/Parallax";
 
 export default function Hero() {
   const { t, lang } = useLang();
@@ -12,6 +14,11 @@ export default function Hero() {
 
   return (
     <header className="hero" id="top">
+      <div className="aurora" aria-hidden="true">
+        <span className="a1" />
+        <span className="a2" />
+        <span className="a3" />
+      </div>
       <div className="wrap hero-grid">
         <div>
           <span className="eyebrow anim-up anim-d1">{t.hero.eyebrow}</span>
@@ -23,17 +30,27 @@ export default function Hero() {
           </h1>
           <p className="hero-body anim-up anim-d3">{t.hero.body}</p>
           <div className="hero-cta anim-up anim-d4">
-            <a className="btn btn-primary" href="#work">
-              {t.hero.ctaWork} →
-            </a>
-            <PdfButton href={cvHref} label={t.hero.ctaCv} title="Mihir Bavisi — CV" className="btn btn-ghost" />
-            <a className="btn btn-ghost" href="#contact">
-              {t.hero.ctaContact}
-            </a>
+            <Magnetic>
+              <a className="btn btn-primary" href="#work">
+                {t.hero.ctaWork} →
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a className="btn btn-ghost" href={cvHref} target="_blank" rel="noopener noreferrer">
+                ↓ {t.hero.ctaCv}
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a className="btn btn-ghost" href="#contact">
+                {t.hero.ctaContact}
+              </a>
+            </Magnetic>
           </div>
           <div className="hero-stats anim-up anim-d5">
             <div>
-              <div className="n">{t.hero.stat1}</div>
+              <div className="n">
+                <Counter value={5} suffix="+" />
+              </div>
               <div className="l">{t.hero.stat1l}</div>
             </div>
             <div>
@@ -47,7 +64,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="phone-wrap">
+        <Parallax speed={0.12} className="phone-wrap">
           <div className="phone" aria-hidden="true">
             <div className="screen">
               <div className="statusbar">
@@ -59,15 +76,21 @@ export default function Hero() {
               <div className="prole">{t.hero.cardRole}</div>
               <div className="chips">
                 <div className="chip">
-                  <div className="cn">{t.hero.cardS1}</div>
+                  <div className="cn">
+                    <Counter value={5} suffix="+" />
+                  </div>
                   <div className="cl">{t.hero.cardS1l}</div>
                 </div>
                 <div className="chip">
-                  <div className="cn">{t.hero.cardS2}</div>
+                  <div className="cn">
+                    <Counter value={7} />
+                  </div>
                   <div className="cl">{t.hero.cardS2l}</div>
                 </div>
                 <div className="chip">
-                  <div className="cn">{t.hero.cardS3}</div>
+                  <div className="cn">
+                    <Counter value={2} />
+                  </div>
                   <div className="cl">{t.hero.cardS3l}</div>
                 </div>
               </div>
@@ -83,7 +106,7 @@ export default function Hero() {
               <div className="open">{t.hero.cardOpen}</div>
             </div>
           </div>
-        </div>
+        </Parallax>
       </div>
     </header>
   );

@@ -6,8 +6,19 @@ export default function ThemeToggle() {
     const [theme, setTheme] = useState<"light" | "dark">("light");
 
     useEffect(() => {
+        const mq = window.matchMedia("(prefers-color-scheme: dark)");
+        const apply = () => {
+            // only auto-follow if the user hasn't picked manually
+            if (!localStorage.getItem("theme")) {
+                const sys = mq.matches ? "dark" : "light";
+                document.documentElement.dataset.theme = sys;
+                setTheme(sys);
+            }
+        };
         const current = (document.documentElement.dataset.theme as "light" | "dark") || "light";
         setTheme(current);
+        mq.addEventListener("change", apply);
+        return () => mq.removeEventListener("change", apply);
     }, []);
 
     function toggle() {

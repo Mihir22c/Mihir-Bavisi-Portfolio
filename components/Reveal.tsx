@@ -2,13 +2,16 @@
 
 import { useEffect, useRef, useState, ReactNode } from "react";
 
+// Scroll-reveal with direction variants. Backward compatible with old usage.
 export default function Reveal({
   children,
   delay = 0,
+  variant = "up",
   className = "",
 }: {
   children: ReactNode;
   delay?: number;
+  variant?: "up" | "left" | "right" | "zoom";
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -35,7 +38,7 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      className={`reveal ${shown ? "in" : ""} ${className}`}
+      className={`reveal ${variant} ${shown ? "in" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
