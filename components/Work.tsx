@@ -3,10 +3,9 @@
 import { useLang } from "@/lib/i18n";
 import Reveal from "./Reveal";
 
-const GITHUB = "https://github.com/Mihir22c";
-// TODO: once your flagship "Native Bridge Toolkit" repo is public,
-// replace FLAGSHIP_REPO with its real URL (e.g. https://github.com/Mihir22c/native-bridge-toolkit).
+const GITHUB = "https://github.com/Mihir22c?tab=repositories";
 const FLAGSHIP_REPO = "https://github.com/Mihir22c/Perks";
+const BACKEND_REPO = "https://github.com/Mihir22c/Perks-Backend";
 
 export default function Work() {
   const { t } = useLang();
@@ -66,6 +65,11 @@ export default function Work() {
               <div className="work-tag">{t.work.flagshipTag}</div>
               <h3>{t.work.flagshipName}</h3>
               <p>{t.work.flagshipBody}</p>
+              <div className="work-stack">
+                {t.work.flagshipStack.map((s) => (
+                  <span key={s}>{s}</span>
+                ))}
+              </div>
               <div className="flagship-row">
                 <a
                   className="btn btn-onviolet"
@@ -74,6 +78,14 @@ export default function Work() {
                   rel="noopener noreferrer"
                 >
                   ★ {t.work.flagshipCta}
+                </a>
+                <a
+                  className="btn btn-line-light"
+                  href={BACKEND_REPO}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.work.backendCta} →
                 </a>
                 <a
                   className="btn btn-line-light"
