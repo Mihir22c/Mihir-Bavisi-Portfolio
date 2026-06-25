@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 const GITHUB = "https://github.com/Mihir22c";
 // TODO: once your flagship "Native Bridge Toolkit" repo is public,
 // replace FLAGSHIP_REPO with its real URL (e.g. https://github.com/Mihir22c/native-bridge-toolkit).
-const FLAGSHIP_REPO = GITHUB;
+const FLAGSHIP_REPO = "https://github.com/Mihir22c/Perks";
 
 export default function Work() {
   const { t } = useLang();
@@ -42,7 +42,7 @@ export default function Work() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                         App Store →
+                        App Store →
                       </a>
                     )}
                     {c.android && (
