@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Mihir Bavisi React Native Engineer",
   description:
     "Mihirkumar Bavisi React Native engineer with 5+ years building production iOS & Android apps and the native modules underneath them. Based in Nuremberg, open to EU / remote roles from Q3 2026.",
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://mihirbavisi.com"),
   openGraph: {
     title: "Mihir Bavisi React Native Engineer",
     description:
