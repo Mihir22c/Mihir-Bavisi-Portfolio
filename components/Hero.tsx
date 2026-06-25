@@ -83,7 +83,7 @@ export default function Hero() {
                 </div>
                 <div className="chip">
                   <div className="cn">
-                    <Counter value={7} />
+                    <Counter value={6} />
                   </div>
                   <div className="cl">{t.hero.cardS2l}</div>
                 </div>
