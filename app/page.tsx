@@ -7,6 +7,7 @@ import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Backdrop from "@/components/Backdrop";
+import Products from "@/components/Products";
 
 export default function Page() {
   return (
@@ -19,6 +20,7 @@ export default function Page() {
         <Skills />
         <Experience />
         <Work />
+        <Products />
         <Contact />
       </main>
       <Footer />

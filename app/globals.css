@@ -426,3 +426,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .backdrop { display: none; }
   .magnetic { transition: none; }
 }
+
+/* ---------- SOCIAL ICONS ---------- */
+.social-icons { display: flex; gap: 14px; align-items: center; }
+.icon-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--muted); transition: color .2s, transform .15s;
+}
+.icon-link:hover { color: var(--violet); transform: translateY(-2px); }
+.icon-link svg { width: 20px; height: 20px; fill: currentColor; display: block; }
+
+/* icon + label rows (contact section) */
+.contact-direct a { display: inline-flex; align-items: center; gap: 10px; }
+.contact-direct a svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
